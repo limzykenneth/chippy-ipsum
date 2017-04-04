@@ -1,0 +1,15 @@
+{
+	"<start>": "<menu-items>",
+	"<menu-items>": ["<batter> fish", "<batter> chips", "curry chips", "fried chicken", "<batter> cod", "<batter> haddock", "<batter> plaice", "<batter> skate", "fish cake", "<batter> scampi", "fish fingers", "nuggets", "<big> <batter> <vege> saussage", "<big> <batter> saveloy", "<batter> roe", "<batter> onion rings", "beef burger", "cheeseburger", "chicken burger", "<vege> burger","jacket potato", "<pie-ingredient> pie", "<condiments>", "<mush> peas", "coleslaw", "gravy", "pickled <pickling>", "brown sauce", "<drink>", "<punctuation>"],
+	"<drink>": ["coke", "orange pop", "irn-bru", "lemonade", "<salad-type> salad"],
+	"<kebab>": [],
+	"<salad-type>": ["greek", "prawn", "mixed"],
+	"<pie-ingredient>": ["steak & kidney", "chicken & mushroom", "beef & onion"],
+	"<condiments>": ["vinegar", "mayonaise", "ketchup"],
+	"<batter>": ["", "", "", "", "battered"],
+	"<mush>": ["", "mushy"],
+	"<big>": ["", "jumbo"],
+	"<vege>": ["vegetarian", ""],
+	"<pickling>": ["onion", "egg"],
+	"<punctuation>": [","]
+}
