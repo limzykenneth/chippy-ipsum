@@ -1,4 +1,7 @@
 /* default settings (layout only, NOT for typographic details) */
+*{
+	box-sizing: border-box;
+}
 
 a:link{
 	text-decoration:none;
@@ -11,43 +14,73 @@ a:visited{
 }
 
 body{
-	background-color:#fff;
+	background-color:#a0e0ff;
+	font-family: "Fira Sans", sans-serif;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 }
-
-
-/* default typography presets */
-
-
-h1{
-	font-family: "Gill Sans", "Helvetica", sans-serif;
-	font-size: 4em;
-}
-h2{
-	font-family:Georgia,serif;
-	font-size:3em;
-}
-h3{
-	font-size:2em;
-}
-h4{
-	font-size:1.5em;
-}
-h5{
-	font-size:1em;
-}
-h6{
-	font-size:0.5em;
-}
-p{
-
-}
-
-div{
-
-}
-
-
 
 /* custom modifications */
+#page-header{
+	position: relative;
+	width: 70vw;
+	max-width: 800px;
+	margin: 20px auto;
+	padding: 0 25px;
 
+	.title{
+		font-family: 'Shadows Into Light', cursive;
+		font-size: 5rem;
+		margin-top: 0;
+		margin-bottom: 10px;
 
+		.chippy-logo{
+			width: 128px;
+			height: auto;
+		}
+	}
+
+	.description{
+		padding: 0 5px;
+		font-size: 1.2rem;
+		font-weight: 700;
+	}
+}
+
+#page-content{
+	position: relative;
+	background-color: #fff;
+	width: 70vw;
+	max-width: 800px;
+	margin: 30px auto;
+	padding: 30px;
+	flex: 1;
+
+	#generate{
+		#paragraph-number, #sentence-number{
+			width: 3rem;
+		}
+	}
+
+	.chippy-ipsum{
+		width: 100%;
+	}
+}
+
+#page-footer{
+	width: 100%;
+	background-color: black;
+	color: white;
+	padding: 0 20px;
+	font-size: 0.8rem;
+
+	a{
+		color: white;
+		text-decoration: none;
+
+		&:hover{
+			color: #d0d0d0;
+		}
+	}
+}

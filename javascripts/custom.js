@@ -19,7 +19,6 @@ $(document).ready(function() {
 			e.preventDefault();
 
 			var para = genParagraph(parseInt($("#page-content #paragraph-number").val()), parseInt($("#page-content #sentence-number").val()));
-			console.log(para);
 			$("#page-content .chippy-ipsum").html(para);
 		});
 
@@ -37,10 +36,17 @@ $(document).ready(function() {
 			for(var i=0; i<paragraphNo; i++){
 				paragraph += "<p>";
 
+				if(i === 0){
+					paragraph += "Chippy ipsum dolor amet ";
+				}
+
 				for(var j=0; j<sentenceNo; j++){
 					var sentence = chippyGen.expandFrom("<sentence>").replace(/^,/, "").replace(/\s\s+/g, " ").replace(/^\s/, "");
-					sentence = sentence.charAt(0).toUpperCase() + sentence.slice(1, sentence.length-1) + ". ";
-					sentence = sentence.replace(/\s,/g, ",").replace(/,+/g, ",").replace(/,\./g, ".");
+					if(!(i === 0 && j === 0)){
+						sentence = sentence.charAt(0).toUpperCase() + sentence.slice(1, sentence.length-1);
+					}
+					sentence += ". ";
+					sentence = sentence.replace(/\s,/g, ",").replace(/,+/g, ",").replace(/,\./g, ".").replace(/\s\./g, ".");
 					paragraph += sentence;
 				}
 				paragraph += "</p>";

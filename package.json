@@ -14,8 +14,8 @@
     "prewatch": "npm run compile",
     "watch": "http-server & open http://localhost:8080/ && onchange './stylesheets/**/*.less' './javascripts/!(main|main.min|vendor/**).js' -v -- npm run compile",
     "predeploy:dev": "npm run compile",
-    "deploy:dev": "echo 'Hold on there, you haven't defined anything!'",
-    "deploy:prod": "echo 'Hold on there, you haven't defined anything!'",
+    "deploy:dev": "echo 'chippyipsum.surge.sh' > CNAME && surge .",
+    "deploy:prod": "echo 'chippyipsum.com' > CNAME && surge .",
     "predeploy": "npm run compile",
     "deploy": "npm run deploy:prod"
   },
