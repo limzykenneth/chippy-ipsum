@@ -13,12 +13,17 @@ a:visited{
 	color:#fff;
 }
 
+html{
+	overflow-x: hidden;
+}
+
 body{
 	background-color:#a0e0ff;
 	font-family: "Fira Sans", sans-serif;
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
+	overflow-x: hidden;
 }
 
 /* custom modifications */
@@ -29,15 +34,37 @@ body{
 	margin: 20px auto;
 	padding: 0 25px;
 
+	@media (max-width: 750px){
+		width: 100vw;
+	}
+
 	.title{
 		font-family: 'Shadows Into Light', cursive;
 		font-size: 5rem;
 		margin-top: 0;
 		margin-bottom: 10px;
 
+		@media (max-width: 750px){
+			text-align: center;
+			font-size: 2.5rem;
+		}
+
+		@media (max-width: 350px){
+			margin-left: 10px;
+		}
+
 		.chippy-logo{
 			width: 128px;
 			height: auto;
+			display: inline-block;
+
+			@media (max-width: 750px){
+				width: 72px;
+			}
+
+			@media (max-width: 350px){
+				margin-left: -20px;
+			}
 		}
 	}
 
@@ -45,6 +72,15 @@ body{
 		padding: 0 5px;
 		font-size: 1.2rem;
 		font-weight: 700;
+
+		@media (max-width: 750px){
+			text-align: center;
+			font-size: 1.1rem;
+		}
+
+		@media (max-width: 350px){
+			font-size: 1rem;
+		}
 	}
 }
 
@@ -56,6 +92,16 @@ body{
 	margin: 30px auto;
 	padding: 30px;
 	flex: 1;
+
+	@media (max-width: 750px){
+		margin-top: 0;
+		width: 90vw;
+	}
+
+	@media (max-width: 350px){
+		padding: 15px;
+		font-size: 0.9rem;
+	}
 
 	#generate{
 		#paragraph-number, #sentence-number{
