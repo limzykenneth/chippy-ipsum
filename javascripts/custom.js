@@ -15,11 +15,15 @@ $(document).ready(function() {
 		var completeRule = genSentence(Math.floor(Math.random() * 5 + 8), startRule);
 		chippyGen.addRule("<sentence>", completeRule);
 
+		$("#page-content #generate #btn").prop("disabled", false);
+
 		$("#page-content #generate").submit(function(e){
 			e.preventDefault();
 
 			var para = genParagraph(parseInt($("#page-content #paragraph-number").val()), parseInt($("#page-content #sentence-number").val()));
 			$("#page-content .chippy-ipsum").html(para);
+
+			return false;
 		});
 
 		function genSentence(words, rule){
